@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class StudentController extends Controller
 {
@@ -13,9 +14,12 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $students = Student::all();
+        $students = Student::paginate(5);
+        $students->withPath('/home/student');
+        // dd($students);
         return view('student/index', compact('students'));
     }
 
@@ -54,7 +58,6 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        // dd($student);
         return view('student/show', compact('student'));
 
     }

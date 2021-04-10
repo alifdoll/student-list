@@ -16,15 +16,15 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-// if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
-//     require __DIR__.'/../storage/framework/maintenance.php';
-// }
-
-
-//UNTUK SERVER
-if (file_exists(__DIR__.'/../../../repositories/student-list/storage/framework/maintenance.php')) {
-    require __DIR__.'/../../../repositories/student-list/storage/framework/maintenance.php';
+if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
+    require __DIR__.'/../storage/framework/maintenance.php';
 }
+
+
+// //UNTUK SERVER
+// if (file_exists(__DIR__.'/../../../repositories/student-list/storage/framework/maintenance.php')) {
+//     require __DIR__.'/../../../repositories/student-list/storage/framework/maintenance.php';
+// }
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +37,10 @@ if (file_exists(__DIR__.'/../../../repositories/student-list/storage/framework/m
 |
 */
 
-// require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 //UNTUK DI SERVER
-require __DIR__.'/../../../repositories/student-list/vendor/autoload.php';
+// require __DIR__.'/../../../repositories/student-list/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -53,9 +53,9 @@ require __DIR__.'/../../../repositories/student-list/vendor/autoload.php';
 |
 */
 
-// $app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
-$app = require_once __DIR__.'/../../../repositories/student-list/bootstrap/app.php';
+// $app = require_once __DIR__.'/../../../repositories/student-list/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 

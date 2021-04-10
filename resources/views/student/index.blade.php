@@ -18,12 +18,16 @@
               <ul class="list-group">
                 @foreach($students as $student)
                 <li class="list-group-item d-flex justify-content-between align-items-center">{{ $student-> mhsnama }}
-                  <a class="badge rounded-pill bg-info text-dark" href="/student/{{ $student->mhsnim }}">Detail</a>
+                  <a class="badge rounded-pill bg-info text-dark" href="/home/student/{{ $student->mhsnim }}">Detail</a>
                 </li>
                 @endforeach
               </ul>
         </div>
     </div>
+    <div class="page my-3">
+      {{ $students->onEachSide(1)->links() }}
+    </div>
 </div>
+
 @endsection
 
