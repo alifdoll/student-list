@@ -19,21 +19,6 @@ use Illuminate\Support\Facades\Gate;
 |
 */
 
-
-
-// Route::get('/', [AuthController::class, 'index']);
-// Route::get('/', function(){
-//     return "HELLO";
-// // });
-
-// Route::get('/home', function(){
-//     dd(Auth::user());
-// });
-
-// Route::post('/user', [AuthController::class, 'userlogin']);
-
-// 
-
 Route::get('/', function(){	
 	return redirect('/login');
 });
