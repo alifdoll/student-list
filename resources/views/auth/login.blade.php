@@ -28,6 +28,7 @@
   </div>
     
   <button type="submit" class="btn btn-primary">Login</button>
+  <a href="/register" class="btn btn-primary">Register</a>
 </form>
  </div>
  @endsection
