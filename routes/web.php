@@ -23,7 +23,7 @@ Route::get('/', function(){
 	return redirect('/login');
 });
 
-Route::get('home', [PagesController::class, 'home']);
+Route::get('home', [PagesController::class, 'home'])->middleware('auth');
 
 Route::prefix('home')->middleware('auth')->name('home/')->group(function(){
 	Route::get('/about', [PagesController::class, 'about']);
